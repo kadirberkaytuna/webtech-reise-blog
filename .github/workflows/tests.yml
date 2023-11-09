@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        name: Set up JDK 17
+      - name: Set up JDK 17
         with:
           distibution: "adopt"
           java-version: 17
-        name: clean build
+      -  name: clean build
         run: ./gradlew clean build --info --stacktrace
