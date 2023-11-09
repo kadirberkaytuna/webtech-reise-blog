@@ -1,6 +1,6 @@
 name: CI
 
-ON [ push ]
+on:  [ push ]
 
 jobs:
   build:
