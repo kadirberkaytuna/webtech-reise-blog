@@ -22,9 +22,8 @@ public class PersonRestController {
         persons.add(new Person(1,"Maxima","Meier",true));
     }
     @GetMapping(path = "/api/v1/persons")
-    @ResponseStatus(code = HttpStatus.OK)
-    public List<Person>fetchPerson() {
-        return persons;
+    public ResponseEntity<List<Person>>fetchPerson() {
+        return ResponseEntity.ok(persons);
 
     }
 }
